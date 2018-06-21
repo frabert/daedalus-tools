@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Daedalus.Core.fs" />
+    <None Include="Script.fsx" />
+    <Compile Include="Daedalus.Core.Ast.fs" />
+    <Compile Include="Daedalus.Core.Grammar.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FParsec" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
