@@ -8,6 +8,7 @@
     <None Include="Script.fsx" />
     <Compile Include="Daedalus.Core.Ast.fs" />
     <Compile Include="Daedalus.Core.Grammar.fs" />
+    <Compile Include="Daedalus.Core.Tokenizer.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FParsec" />

@@ -56,7 +56,7 @@ module Grammar =
   let baseExpr = 
     getPosition >>=
     fun pos -> choice [
-      parenthesis expr
+      parenthesis expr |>> fun e -> Parenthesis(e, pos)
       puint32 |>> fun v -> IntLiteral(v, pos)
       pfloat |>> fun v -> FloatLiteral(v, pos)
       stringLiteral |>> fun s -> StringLiteral(s, pos)

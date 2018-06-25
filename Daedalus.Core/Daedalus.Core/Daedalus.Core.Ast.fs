@@ -58,6 +58,7 @@ type Expression =
   | Unary of UnaryOp * Expression * FParsec.Position
   | Binary of BinaryOp * Expression * Expression * FParsec.Position
   | ArrayAccess of Expression * Expression * FParsec.Position
+  | Parenthesis of Expression * FParsec.Position
 
 type IfBranch = IfBranch of cond:Expression * body:Block * FParsec.Position
 and Block = Block of Statement list * FParsec.Position
